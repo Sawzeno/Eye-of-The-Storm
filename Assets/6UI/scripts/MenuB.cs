@@ -1,9 +1,8 @@
-using System;
-using Unity.VisualScripting;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-
-public class NewGame : MonoBehaviour
+public class MenuB : MonoBehaviour
 {
     [SerializeField] private Transform yes;
     public GameObject[] cams;
@@ -30,11 +29,11 @@ public class NewGame : MonoBehaviour
         }
     }
 
-    private void StartGame()
+    private void Goback()
     {
         Debug.Log("start game");
-        cams[0].SetActive(false);
-        cams[1].SetActive(true);
+        cams[0].SetActive(true);
+        cams[1].SetActive(false);
         cams[2].SetActive(false);
     }
     private void OnMouseOver()
@@ -50,7 +49,6 @@ public class NewGame : MonoBehaviour
     private void OnMouseDown()
     {
        
-        StartGame();
+        Goback();
     }
-
 }
